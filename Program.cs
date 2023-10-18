@@ -12,8 +12,8 @@ namespace ListaExercicios
     {
         static void Main(string[] args)
         {
-            ListaMatrizes.Exercicio17.minimoMaximo();   
-        }
+            ListaFuncoes.Exercicio09.principal();
 
+        }
     }                          
 }
