@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ListaExercicios.ListaFuncoes
+namespace ListaExercicios.ListaFuncoes.Lista01
 {
     internal class Exercicio04
     {
@@ -33,7 +33,7 @@ namespace ListaExercicios.ListaFuncoes
                 Console.Write(i + " * ");
                 fatorial *= i;
             }
-            Console.Write(" = "+fatorial);
+            Console.Write(" = " + fatorial);
         }
     }
 }

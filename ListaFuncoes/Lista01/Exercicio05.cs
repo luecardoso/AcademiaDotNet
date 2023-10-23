@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ListaExercicios.ListaFuncoes
+namespace ListaExercicios.ListaFuncoes.Lista01
 {
     internal class Exercicio05
     {
@@ -22,7 +22,7 @@ namespace ListaExercicios.ListaFuncoes
             double numero = double.Parse(Console.ReadLine());
             return numero;
         }
-        
+
         static void conversaoFahrenheit(double temperaturaCelcius)
         {
             double temperaturaFahrenheit = (9 * temperaturaCelcius + 160) / 5;

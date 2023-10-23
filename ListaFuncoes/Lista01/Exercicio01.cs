@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ListaExercicios.ListaFuncoes
+namespace ListaExercicios.ListaFuncoes.Lista01
 {
     internal class Exercicio01
     {
@@ -46,7 +46,7 @@ namespace ListaExercicios.ListaFuncoes
             double valor1, valor2;
             switch (opcao)
             {
-                
+
                 case "1":
                     valor1 = digiteNumero();
                     valor2 = digiteNumero();

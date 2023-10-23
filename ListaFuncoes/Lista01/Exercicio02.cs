@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ListaExercicios.ListaFuncoes
+namespace ListaExercicios.ListaFuncoes.Lista01
 {
     internal class Exercicio02
     {
@@ -26,7 +26,7 @@ namespace ListaExercicios.ListaFuncoes
         {
             for (int i = 0; i < v.Length; i++)
             {
-                Console.Write(v[i]+"| ");
+                Console.Write(v[i] + "| ");
             }
         }
 
@@ -35,7 +35,7 @@ namespace ListaExercicios.ListaFuncoes
             Console.WriteLine("-----VETOR------");
             for (int i = 0; i < v.Length; i++)
             {
-                Console.Write( (i + 1) + "a posição = ");
+                Console.Write(i + 1 + "a posição = ");
                 v[i] = int.Parse(Console.ReadLine());
             }
         }
@@ -55,7 +55,7 @@ namespace ListaExercicios.ListaFuncoes
 
         static void mensagem(int valor)
         {
-            Console.WriteLine("Quantidade de número pares no vetor: "+valor);
+            Console.WriteLine("Quantidade de número pares no vetor: " + valor);
         }
     }
 }

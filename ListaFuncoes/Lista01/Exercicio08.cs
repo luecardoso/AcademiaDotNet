@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ListaExercicios.ListaFuncoes
+namespace ListaExercicios.ListaFuncoes.Lista01
 {
     internal class Exercicio08
     {
@@ -27,8 +27,8 @@ namespace ListaExercicios.ListaFuncoes
 
         static int parOuImpar(int num)
         {
-            return num % 2 == 0? 0 : 1;
-            
+            return num % 2 == 0 ? 0 : 1;
+
         }
     }
 }

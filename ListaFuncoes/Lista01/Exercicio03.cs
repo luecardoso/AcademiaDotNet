@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ListaExercicios.ListaFuncoes
+namespace ListaExercicios.ListaFuncoes.Lista01
 {
     internal class Exercicio03
     {
@@ -14,7 +14,7 @@ namespace ListaExercicios.ListaFuncoes
              * Desenvolva uma função que calcule a média de três
              * números fornecidos como argumentos.
              */
-            double x = 0,y =0,z = 0;
+            double x = 0, y = 0, z = 0;
 
             mensagem(media(x, y, z));
         }
@@ -31,7 +31,7 @@ namespace ListaExercicios.ListaFuncoes
             a = digiteNumero();
             b = digiteNumero();
             c = digiteNumero();
-            double media = (a+b+c) / 3;
+            double media = (a + b + c) / 3;
             return media;
         }
 

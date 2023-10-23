@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ListaExercicios.ListaFuncoes
+namespace ListaExercicios.ListaFuncoes.Lista01
 {
     internal class Exercicio09
     {
@@ -18,7 +18,7 @@ namespace ListaExercicios.ListaFuncoes
              * parâmetro para uma função que verifica e retorna o menor elemento do 
              * vetor.
              */
-            somaEntreNumeros(digiteNumero(),digiteNumero());
+            somaEntreNumeros(digiteNumero(), digiteNumero());
             int[] vetor = new int[10]; ;
             lerVetor(vetor);
             imprimirVetor(vetor);
@@ -49,8 +49,8 @@ namespace ListaExercicios.ListaFuncoes
                     soma += i;
                 }
             }
-            
-            Console.WriteLine("Soma entre "+n1 +" e "+n2+" = "+soma);
+
+            Console.WriteLine("Soma entre " + n1 + " e " + n2 + " = " + soma);
             return soma;
         }
 
@@ -59,8 +59,7 @@ namespace ListaExercicios.ListaFuncoes
             Console.WriteLine("-----VETOR------");
             for (int i = 0; i < v.Length; i++)
             {
-                //Console.Write((i + 1) + "a posição = ");
-                //v[i] = int.Parse(Console.ReadLine());
+                //v[i] = digiteNumero();
                 v[i] = new Random().Next(1, 25); ;
             }
         }
@@ -71,6 +70,7 @@ namespace ListaExercicios.ListaFuncoes
             {
                 Console.Write(v[i] + "| ");
             }
+            Console.WriteLine("");
         }
 
         static int menorNumero(int[] v)
@@ -83,7 +83,7 @@ namespace ListaExercicios.ListaFuncoes
                     menor = v[i];
                 }
             }
-            Console.WriteLine("Menor elemento: "+menor);
+            Console.WriteLine("Menor elemento: " + menor);
             return menor;
         }
 
