@@ -29,7 +29,7 @@ namespace ListaExercicios.ListaFuncoes.Lista02
             {
                 for (int i = 0; i < matriz.GetLength(0); i++)
                 {
-                    matrizTransposta[i,j] = matriz[i, j];
+                    matrizTransposta[j,i] = matriz[i, j];
                 }
                 Console.WriteLine("");
             }

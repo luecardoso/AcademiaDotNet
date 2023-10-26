@@ -12,7 +12,7 @@ namespace ListaExercicios
     {
         static void Main(string[] args)
         {
-            ListaFuncoes.Lista02.Exercicio01.principal();
+            ListaFuncoes.Lista02.Exercicio07.principal();
 
         }
     }                          
