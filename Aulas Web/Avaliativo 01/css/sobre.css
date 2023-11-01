@@ -1,0 +1,155 @@
+*{
+    margin: 0;
+    padding: 0;
+    /* box-sizing: border-box; */
+    
+}
+
+body
+{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: medium;
+    min-height: 100vh;
+    margin: 0 10%; 
+    background-color: rgb(255, 255, 255);
+}
+
+header{
+    background-color: rgb(250, 183, 95);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid rgb(194, 194, 194);
+}
+
+
+.navegacao{
+    display: flex;
+    width: 100%;
+    height: 100px;
+    justify-content: space-around;
+    background-color: antiquewhite;
+    position: fixed;
+}
+
+.conteudo-logo
+{
+    display: flex;
+    align-items: center;
+}
+
+.conteudo-logo img
+{
+    width: 80px;
+    border-radius: 50%;
+}
+
+.conteudo-logo h3
+{
+    font-family: 'Pacifico', cursive;
+    font-size: 20px;
+    margin: 20px;
+    color: rgb(61, 61, 61);
+}
+.conteudo-menu
+{
+    display: flex;
+    align-items: center;
+}
+
+nav ul, nav li
+{
+    display: flex;
+}
+
+
+nav a
+{
+    display: block;
+    text-decoration: none;
+    padding: 15px;
+    color: rgb(61, 61, 61);
+    text-transform: uppercase;
+    text-decoration: solid;
+    font-weight: 700;
+}
+
+nav a:hover{
+    background-color: rgb(233, 29, 29);
+    color: white;
+}
+
+main
+{
+    height: 150vh;
+}
+
+.conteudo-sobre
+{
+    display: flex;
+    justify-content: space-between;
+    height: 50vh;
+    padding: 0.5%;
+
+    align-content: center;
+    /* margin-left: 10%;
+    margin-right: 10%; */
+}
+
+.texto-sobre
+{
+    background-color: blue;
+    margin: 20px;
+    padding: 35px;
+    flex: 1;
+    /* border: 1px solid rgb(197, 197, 197);
+    border-radius: 20px ; */
+    background-color: rgb(255, 255, 255);
+}
+.texto-sobre p
+{
+    text-indent: 35px;
+    text-align: justify;
+    padding: 8px;
+}
+
+.texto-sobre span
+{
+    text-decoration: underline;
+    font-weight: 700;
+}
+.imagem-sobre img
+{
+    /* background-color: blueviolet; */
+
+    background-size: cover;
+    margin: 20px;
+    width: 100%;
+    height: 45vh;
+    border-radius: 20px ;
+}
+img #missao
+{
+    margin-top: 1000px;
+}
+h2
+{
+    text-align: center;
+    text-transform: uppercase;
+    border-bottom: 1px solid rgb(194, 194, 194);
+    padding: 30px;
+    background-color: rgb(233, 29, 29);
+    color: white;
+    margin-top: 80px;
+}
+
+
+footer
+{
+    background-color: rgb(241, 46, 39);
+    /* position: relative; */
+    padding: 15px;
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+} 
