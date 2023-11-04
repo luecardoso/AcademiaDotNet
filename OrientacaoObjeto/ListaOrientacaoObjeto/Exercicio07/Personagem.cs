@@ -26,18 +26,52 @@ namespace Exercicio07
          */
         public String nome;
         public int posicao;
-        public int itensColetados;
+        public string[] itensColetados;
         public String classe;
 
+        public Personagem() { }
+        public Personagem(string nome, int posicao, string[] itensColetados, string classe)
+        {
+            this.nome = nome;
+            this.posicao = posicao;
+            this.itensColetados = itensColetados;
+            this.classe = classe;
+        }
 
         public void Atacar(double dano)
         {
-
+            if (dano > 1 && dano<=10)
+            {
+                Console.WriteLine(this.nome + " causou " + dano + " de dano!");
+            }
+            else
+            {
+                Console.WriteLine(this.nome + " não causou nenhum dano!");
+            }
+            
         }
 
         public void Movimentar(int posicao)
         {
-
+            switch (posicao)
+            {
+                case 1:
+                    Console.WriteLine(this.nome+" andou para frente!");
+                    break;
+                case 2:
+                    Console.WriteLine(this.nome + " andou para trás!");
+                    break;
+                case 3:
+                    Console.WriteLine(this.nome + " andou para direita!");
+                    break;
+                case 4:
+                    Console.WriteLine(this.nome + " andou para esquerda!");
+                    break;
+                default:
+                    Console.WriteLine("Nenhuma orientação foi dada!");
+                    Console.WriteLine(this.nome + " ficou parado");
+                    break;
+            }
         }
     }
 }
