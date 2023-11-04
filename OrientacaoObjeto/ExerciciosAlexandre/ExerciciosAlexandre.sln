@@ -5,7 +5,11 @@ VisualStudioVersion = 17.7.34202.233
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExercicioPadel", "ExercicioPadel\ExercicioPadel.csproj", "{6B13482D-93C4-4CEB-84F0-C2DCEB14B2E0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AmigoSecreto", "AmigoSecreto\AmigoSecreto.csproj", "{EBC34135-3EC4-4521-9FD0-15FAFBF772C7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AmigoSecreto", "AmigoSecreto\AmigoSecreto.csproj", "{EBC34135-3EC4-4521-9FD0-15FAFBF772C7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arquivo", "Arquivo\Arquivo.csproj", "{6B52CFE3-521D-4520-8F14-0F990EDC1B82}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Colecao", "Colecao\Colecao.csproj", "{496B2F2B-C849-4AC2-BD88-1235A191352D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +25,14 @@ Global
 		{EBC34135-3EC4-4521-9FD0-15FAFBF772C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EBC34135-3EC4-4521-9FD0-15FAFBF772C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EBC34135-3EC4-4521-9FD0-15FAFBF772C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6B52CFE3-521D-4520-8F14-0F990EDC1B82}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B52CFE3-521D-4520-8F14-0F990EDC1B82}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B52CFE3-521D-4520-8F14-0F990EDC1B82}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B52CFE3-521D-4520-8F14-0F990EDC1B82}.Release|Any CPU.Build.0 = Release|Any CPU
+		{496B2F2B-C849-4AC2-BD88-1235A191352D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{496B2F2B-C849-4AC2-BD88-1235A191352D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{496B2F2B-C849-4AC2-BD88-1235A191352D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{496B2F2B-C849-4AC2-BD88-1235A191352D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
