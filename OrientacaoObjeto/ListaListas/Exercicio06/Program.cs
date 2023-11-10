@@ -4,7 +4,12 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            /*
+             * Utilize o exercício 1 para criar uma lista de produtos e faça 
+             * métodos para apresentar na tela e para consultar produtos pelo código.
+             * 
+             */
+
         }
     }
 }
