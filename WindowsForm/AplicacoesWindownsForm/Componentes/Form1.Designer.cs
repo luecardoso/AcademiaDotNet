@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            ListViewItem listViewItem1 = new ListViewItem("Nome");
-            ListViewItem listViewItem2 = new ListViewItem("Email");
             label_frase = new Label();
             textBox_frase = new TextBox();
             textBox_relacaoNomes = new TextBox();
             listView_relacaoNomes = new ListView();
+            Nome = new ColumnHeader();
+            Email = new ColumnHeader();
             button_limpar = new Button();
             menuStrip1 = new MenuStrip();
             menuToolStripMenuItem = new ToolStripMenuItem();
@@ -72,12 +72,20 @@
             // 
             // listView_relacaoNomes
             // 
-            listView_relacaoNomes.Items.AddRange(new ListViewItem[] { listViewItem1, listViewItem2 });
+            listView_relacaoNomes.Columns.AddRange(new ColumnHeader[] { Nome, Email });
             listView_relacaoNomes.Location = new Point(22, 77);
             listView_relacaoNomes.Name = "listView_relacaoNomes";
             listView_relacaoNomes.Size = new Size(348, 301);
             listView_relacaoNomes.TabIndex = 3;
             listView_relacaoNomes.UseCompatibleStateImageBehavior = false;
+            // 
+            // Nome
+            // 
+            Nome.Text = "Nome";
+            // 
+            // Email
+            // 
+            Email.Text = "Email";
             // 
             // button_limpar
             // 
@@ -162,5 +170,7 @@
         private ToolStripMenuItem limparToolStripMenuItem;
         private ToolStripMenuItem sobreToolStripMenuItem;
         private Button button_cadastrar;
+        private ColumnHeader Nome;
+        private ColumnHeader Email;
     }
 }

@@ -46,7 +46,7 @@ namespace Componentes
 
         private void sobreToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Sistema elaborado pelo prof Alexandre Zamberlan - Academia .NET 2023","Projeto",MessageBoxButtons.OK,MessageBoxIcon.Information);
+            MessageBox.Show("Sistema elaborado pelo prof Alexandre Zamberlan - Academia .NET 2023", "Projeto", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void button_cadastrar_Click(object sender, EventArgs e)
