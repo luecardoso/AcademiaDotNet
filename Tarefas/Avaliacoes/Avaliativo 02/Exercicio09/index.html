@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 09</title>
+</head>
+<body>
+    <!--
+        Crie um formulário com os campos para cadastrar o usuário de um sistema
+        (login,senha e confirmar senha). Permita que a página seja submetida apenas
+        se todos os campos estiverem preenchidos, se os campos senha e confirmar
+        senha forem iguais e a senha possuir entre 6 e 10 caracteres.
+        https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/input/password
+        https://developer.mozilla.org/pt-BR/docs/Web/API/EventTarget/addEventListener
+        https://www.w3schools.com/js/js_htmldom_eventlistener.asp
+        https://www.w3schools.com/jsref/dom_obj_document.asp
+        https://www.w3schools.com/jsref/default.asp
+        https://www.w3schools.com/jsref/dom_obj_event.asp
+    -->
+    <main>
+
+        <form id="formulario" action="">
+            <label for="login">login</label>    
+            <input type="text" id="login" required><br/>
+
+            <label for="senha">senha</label>    
+            <input type="password" id="senha"  minlength="6" maxlength="10" required><br/>
+
+            <label for="confirmar" >confirmar senha</label>    
+            <input type="password" id="confirmar" required minlength="6" maxlength="10"><br/>
+            
+            <span id="aviso" ></span><br/>
+            <button id="enviar" type="submit" onclick="confirmarDados();">Enviar</button>
+        </form>
+    </main>
+    <a href="../lista-exercicios.html">Voltar</a>
+    <script type="text/javascript" src="main.js"></script>
+</body>
+</html>
