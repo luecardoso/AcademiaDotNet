@@ -7,9 +7,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExercicioPadel", "Exercicio
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AmigoSecreto", "AmigoSecreto\AmigoSecreto.csproj", "{EBC34135-3EC4-4521-9FD0-15FAFBF772C7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arquivo", "Arquivo\Arquivo.csproj", "{6B52CFE3-521D-4520-8F14-0F990EDC1B82}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Arquivo", "Arquivo\Arquivo.csproj", "{6B52CFE3-521D-4520-8F14-0F990EDC1B82}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Colecao", "Colecao\Colecao.csproj", "{496B2F2B-C849-4AC2-BD88-1235A191352D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Colecao", "Colecao\Colecao.csproj", "{496B2F2B-C849-4AC2-BD88-1235A191352D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Criptografia", "Criptografia\Criptografia.csproj", "{F2B8A835-E690-4F20-977C-B34100618382}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Colecoes", "Colecoes\Colecoes.csproj", "{4CA27381-5431-40F4-B629-16833483E998}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +37,14 @@ Global
 		{496B2F2B-C849-4AC2-BD88-1235A191352D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{496B2F2B-C849-4AC2-BD88-1235A191352D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{496B2F2B-C849-4AC2-BD88-1235A191352D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F2B8A835-E690-4F20-977C-B34100618382}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2B8A835-E690-4F20-977C-B34100618382}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2B8A835-E690-4F20-977C-B34100618382}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2B8A835-E690-4F20-977C-B34100618382}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4CA27381-5431-40F4-B629-16833483E998}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4CA27381-5431-40F4-B629-16833483E998}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4CA27381-5431-40F4-B629-16833483E998}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4CA27381-5431-40F4-B629-16833483E998}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
