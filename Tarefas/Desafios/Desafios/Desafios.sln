@@ -11,6 +11,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CampoMinado", "CampoMinado\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JogoDaForca", "JogoDaForca\JogoDaForca.csproj", "{91A444AB-6C6C-4598-AC19-85092E963285}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Extras", "Extras", "{6B1AB915-BB52-4C81-B7C9-66EF3D153D8A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AmigoSecreto", "AmigoSecreto\AmigoSecreto.csproj", "{C6927BE3-7AD2-4C34-B20A-CD487F26F01D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,9 +37,18 @@ Global
 		{91A444AB-6C6C-4598-AC19-85092E963285}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{91A444AB-6C6C-4598-AC19-85092E963285}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{91A444AB-6C6C-4598-AC19-85092E963285}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C6927BE3-7AD2-4C34-B20A-CD487F26F01D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6927BE3-7AD2-4C34-B20A-CD487F26F01D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6927BE3-7AD2-4C34-B20A-CD487F26F01D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6927BE3-7AD2-4C34-B20A-CD487F26F01D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{226A4544-F0DE-4E81-943B-9D88B5CBA115} = {6B1AB915-BB52-4C81-B7C9-66EF3D153D8A}
+		{334BA67A-3329-46A8-BA68-AFBB65A7748B} = {6B1AB915-BB52-4C81-B7C9-66EF3D153D8A}
+		{91A444AB-6C6C-4598-AC19-85092E963285} = {6B1AB915-BB52-4C81-B7C9-66EF3D153D8A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {545DD14A-415E-4319-BCEE-F02E50A8A57D}
