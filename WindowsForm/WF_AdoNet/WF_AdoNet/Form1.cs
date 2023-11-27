@@ -12,13 +12,24 @@ namespace WF_AdoNet
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Banco bd = new Banco();
+            //Banco bd = new Banco();
             DataTable dt = new DataTable();
-
             //assim pode inserir sql injection
             //dt = bd.executaConsulta("select * from pessoas where nome ='"+textBox1.Text+"';");
-            dt = bd.executaConsulta("select * from pessoas");
+            //dt = bd.executaConsulta("select * from pessoas");
+            Pessoa p = new Pessoa();
 
+            if (String.IsNullOrEmpty(textBox1.Text))
+            {
+                dt = p.buscaPessoas();
+            }
+            else
+            {
+                p.id = int.Parse(textBox1.Text);
+                p = p.buscaPessoaByIdDR();
+                MessageBox.Show(p.nome);
+                //dt = p.buscaPessoasById();
+            }
             dataGridView1.DataSource = dt;
         }
 

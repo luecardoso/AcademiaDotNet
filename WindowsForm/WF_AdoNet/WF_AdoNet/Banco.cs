@@ -50,20 +50,28 @@ namespace WF_AdoNet
             }
         }
 
-
-        public DataTable executaConsulta(string comandosql)
+        /*
+         public DataTable buscaDataTable()
         {
+            Banco bd = new Banco();
             try
             {
-                abrirConexao();
-
-                SqlCommand sqlCommand = new SqlCommand(comandosql, cn);
+                SqlConnection cn = bd.abrirConexao();
+ 
+                SqlCommand sqlCommand = new SqlCommand();
+                sqlCommand.Connection = cn;
+                sqlCommand.CommandType = System.Data.CommandType.Text;
+                sqlCommand.CommandText = "select * from pessoas";
+ 
                 sqlCommand.ExecuteNonQuery();
-
+ 
                 DataTable dt = new DataTable();
                 SqlDataAdapter adapter = new SqlDataAdapter(sqlCommand);
+ 
                 adapter.Fill(dt);
+ 
                 return dt;
+ 
             }
             catch (Exception ex)
             {
@@ -71,8 +79,9 @@ namespace WF_AdoNet
             }
             finally
             {
-                fecharConexao();
+                bd.fecharConexao();
             }
         }
+         */
     }
 }
