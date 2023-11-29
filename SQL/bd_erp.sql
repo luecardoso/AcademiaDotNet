@@ -1,10 +1,10 @@
 create database mini_erp;
 use mini_erp;
 
-create database categoria
+create table categoria
 (
 	id integer primary key identity,
-	nome varchar(50) not null,
+	nome varchar(50) not null
 );
 
 create table fornecedor
@@ -19,7 +19,7 @@ create table produto
 	nome varchar(60) not null,
 	quantidade int not null,
 	descricao varchar(200),
-	preco double not null,
+	preco float not null,
 	fk_categoria integer not null,
 	foreign key(fk_categoria) references categoria(id),
 	fk_fornecedor integer not null,
@@ -32,5 +32,5 @@ create table cliente
 	nome varchar(60) not null,
 	idade int,
 	telefone varchar(12),
-	sexo char check( sexo in ('F', 'M'))
+	sexo varchar(15)--char check( sexo in ('F', 'M'))
 )
