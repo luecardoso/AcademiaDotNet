@@ -14,7 +14,7 @@
                     "2 - Visualizar todos clientes\n" +
                     "3 - Cadastrar pedidos\n" +
                     "4 - Visualizar todos pedidos");
-                Console.WriteLine("Caso deseje, digite 0 para sair do sistema!");
+                                             Console.WriteLine("Caso deseje, digite 0 para sair do sistema!");
                 op = int.Parse(Console.ReadLine());
                 switch (op)
                 {
@@ -44,7 +44,7 @@
 
         private static void InserirPedidos()
         {
-            using (var contexto = new BancoContext())
+            using (var contexto = new bancoContext())
             {
                 Pedido p = new Pedido();
                 Console.WriteLine("Digite o ID do cliente: ");
@@ -62,7 +62,7 @@
 
         private static void MostrarTodosPedidos()
         {
-            using (var contexto = new BancoContext())
+            using (var contexto = new bancoContext())
             {
                 var pedidos = contexto.Pedidos.ToList(); //buscando todos os pedidos cadastrados
 
@@ -75,7 +75,7 @@
 
         private static void InserirCliente()
         {
-            using (var contexto = new BancoContext())
+            using (var contexto = new bancoContext())
             {
                 Cliente c = new Cliente();
                 Console.WriteLine("Digite o nome do cliente: ");
@@ -93,7 +93,7 @@
 
         private static void MostrarTodosClientes()
         {
-            using (var contexto = new BancoContext())
+            using (var contexto = new bancoContext())
             {
                 var clientes = contexto.Clientes.ToList(); //buscando todos os clientes cadastrados
 
