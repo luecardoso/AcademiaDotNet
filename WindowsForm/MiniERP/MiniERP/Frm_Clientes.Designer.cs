@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             label1 = new Label();
             textBox_Nome = new TextBox();
             maskedTextBox_Telefone = new MaskedTextBox();
@@ -191,10 +192,21 @@
             // 
             // dataGridView_Clientes
             // 
+            dataGridView_Clientes.AllowUserToAddRows = false;
+            dataGridView_Clientes.AllowUserToDeleteRows = false;
             dataGridView_Clientes.BackgroundColor = Color.GhostWhite;
             dataGridView_Clientes.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = SystemColors.Window;
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle1.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.False;
+            dataGridView_Clientes.DefaultCellStyle = dataGridViewCellStyle1;
             dataGridView_Clientes.Location = new Point(36, 72);
             dataGridView_Clientes.Name = "dataGridView_Clientes";
+            dataGridView_Clientes.ReadOnly = true;
             dataGridView_Clientes.Size = new Size(650, 312);
             dataGridView_Clientes.TabIndex = 10;
             // 
@@ -295,7 +307,7 @@
             MaximizeBox = false;
             MdiChildrenMinimizedAnchorBottom = false;
             Name = "Frm_Clientes";
-            Text = "Frm_Clientes";
+            Text = "Gerencia";
             panel_Geral.ResumeLayout(false);
             panel2.ResumeLayout(false);
             panel1.ResumeLayout(false);

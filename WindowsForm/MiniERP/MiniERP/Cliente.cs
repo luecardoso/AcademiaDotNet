@@ -68,7 +68,7 @@ namespace MiniERP
 
         }
 
-        public bool atualizar()
+        public bool atualizar(Cliente cliente)
         {
             Banco bd = new Banco();
             SqlConnection cn = bd.abrirConexao();
@@ -83,15 +83,11 @@ namespace MiniERP
             command.CommandText = "update cliente set nome = @nome, dataNascimento = @dataNascimento, " +
                 "telefone = @telefone, sexo = @sexo " +
                 "where id = @id;";
-            command.Parameters.Add("@nome", System.Data.SqlDbType.VarChar);
-            command.Parameters.Add("@dataNascimento", System.Data.SqlDbType.VarChar);
-            command.Parameters.Add("@telefone", System.Data.SqlDbType.VarChar);
-            command.Parameters.Add("@sexo", System.Data.SqlDbType.VarChar);
-            command.Parameters[0].Value = Nome;
-            command.Parameters[1].Value = DataNascimento;
-            command.Parameters[2].Value = Telefone;
-            command.Parameters[3].Value = Sexo;
-
+            command.Parameters.AddWithValue("@nome", cliente.Nome);
+            command.Parameters.AddWithValue("@dataNascimento", cliente.DataNascimento);
+            command.Parameters.AddWithValue("@telefone", cliente.Telefone);
+            command.Parameters.AddWithValue("@sexo", cliente.Sexo);
+            command.Parameters.AddWithValue("@id", cliente.Id);
 
             try
             {

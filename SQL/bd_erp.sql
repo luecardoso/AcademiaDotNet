@@ -21,12 +21,20 @@ create table produto
 	quantidade int not null,
 	descricao varchar(200),
 	preco float not null,
-	fk_categoria integer not null,
-	foreign key(fk_categoria) references categoria(id),
+	--fk_categoria integer not null,
+	--foreign key(fk_categoria) references categoria(id),
 	fk_fornecedor integer not null,
 	foreign key(fk_fornecedor) references fornecedor(id)
 );
 
+create table produto_fornecedor
+(
+	id integer primary key identity,
+	fk_produto integer not null,
+	foreign key(fk_produto) references produto(id)
+	fk_fornecedor integer not null,
+	foreign key(fk_fornecedor) references fornecedor(id)
+);
 create table cliente
 (
 	id integer primary key identity,
@@ -46,3 +54,4 @@ exec sp_addrolemember 'DB_DATAREADER', 'usuario3';
 exec sp_addrolemember 'DB_DATAWRITER', 'usuario3';
 
 select * from cliente;
+select * from fornecedor where nome like 'a%';
