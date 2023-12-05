@@ -20,15 +20,15 @@ namespace CA_Entity
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             //acessa as configurações do appconfig
-            //ConnectionStringSettings settings = ConfigurationManager.ConnectionStrings["aulaentity"];//com esse config name
-            //string retorno = settings.ConnectionString;
-            //if (settings != null)
-            //{
-            //    retorno = settings.ConnectionString;//pega a string da conexão do database
-            //}
+            ConnectionStringSettings settings = ConfigurationManager.ConnectionStrings["aulaentity"];//com esse config name
+            string retorno = settings.ConnectionString;
+            if (settings != null)
+            {
+                retorno = settings.ConnectionString;//pega a string da conexão do database
+            }
 
-            //optionsBuilder.UseSqlServer(retorno);
-            optionsBuilder.UseSqlServer("Data Source=localhost;Initial Catalog=aulaentity;User ID=aulaentity;password=senha1234;language=Portuguese;");
+            optionsBuilder.UseSqlServer(retorno);
+            //optionsBuilder.UseSqlServer("Data Source=localhost;Initial Catalog=aulaentity;User ID=aulaentity;password=senha1234;language=Portuguese;");
             
             optionsBuilder.UseLazyLoadingProxies();
         }
