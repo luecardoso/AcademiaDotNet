@@ -62,5 +62,110 @@ namespace AulaAPI.Controllers
             }
         }
 
+
+        [HttpDelete]
+        [Route("pessoas/{id}")]
+        public async Task<IActionResult> deletePessoas(
+            [FromServices] Contexto contexto,
+            [FromRoute] int id
+            )
+        {
+            var pessoa = await contexto.Pessoas.FirstOrDefaultAsync(p => p.id == id);
+            if (pessoa == null)
+            {
+                return NotFound("Pessoa não encontrada");
+            }
+            try
+            {
+                contexto.Pessoas.Remove(pessoa);
+                await contexto.SaveChangesAsync();
+                return Ok(pessoa);
+            }
+            catch( Exception ex )
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+
+        [HttpPut]
+        [Route("pessoas/{id}")]
+
+        public async Task<IActionResult> atualizarPessoa(
+            [FromServices] Contexto contexto,
+            [FromBody] Pessoa pessoa,
+            [FromRoute] int id
+            )
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest("Modelo inválido");
+            }
+
+            var p = await contexto.Pessoas.FirstOrDefaultAsync(x => x.id == id);
+            if (p == null)
+            {
+                return NotFound("Pessoa não encontrada!");
+            }
+
+            try
+            {
+                p.nome = pessoa.nome;
+                contexto.Pessoas.Update(p);
+                await contexto.SaveChangesAsync();
+                return Ok(p);
+
+            }
+            catch( Exception ex )
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+
+        [HttpGet]
+        [Route("emails")]
+        public async Task<IActionResult> getEmails(
+            [FromServices] Contexto contexto
+            )
+        {
+            var emails = await contexto.Emails.AsNoTracking().ToListAsync();
+            return emails == null? NoContent() : Ok(emails);
+            //if (emails == null)
+            //{
+            //    return NoContent();
+            //}
+            //else
+            //{
+            //    return Ok(emails);
+            //}
+        }
+
+
+        [HttpPost]
+        [Route("emails/{id}")]
+        public async Task<IActionResult> cadastrarEmailPessoa(
+            [FromServices] Contexto contexto,
+            [FromBody] Email email,
+            [FromRoute] int id
+            )
+        {
+            var pessoa = await contexto.Pessoas.AsNoTracking().FirstOrDefaultAsync(p => p.id == id);
+
+            email.pessoa = pessoa;
+
+            try
+            {
+                contexto.Set<Email>().Add(email);
+                contexto.Entry(email.pessoa).State = EntityState.Unchanged;
+                await contexto.SaveChangesAsync();
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+
+            return Created($"api/emails/{pessoa.id}",email);
+        }
     }
 }

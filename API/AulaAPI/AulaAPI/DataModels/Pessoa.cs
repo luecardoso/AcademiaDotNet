@@ -1,4 +1,5 @@
-﻿using System.Text.Json.Serialization;
+﻿using System.ComponentModel.DataAnnotations;
+using System.Text.Json.Serialization;
 
 namespace AulaAPI.DataModels
 {
@@ -6,6 +7,7 @@ namespace AulaAPI.DataModels
     {
         public int id { get; set; }
 
+        [Required]
         public string nome { get; set; }
 
         [JsonIgnore]
