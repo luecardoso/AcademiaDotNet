@@ -131,3 +131,8 @@ select * from cliente;
 
 select * from compra;
 select * from notafiscal;
+
+insert into produto(nome, quantidade,preco,fk_fornecedor)
+values ('teste 01',5,59,5);
+
+select * from produto;

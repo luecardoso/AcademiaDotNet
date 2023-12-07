@@ -86,9 +86,10 @@ namespace MiniERP
             }
         }
 
-        public static ComboBox buscarFornecedoresCb(ComboBox cb)
+        public static void buscarFornecedoresCb(ComboBox comboBox)
         {
             Banco bd = new Banco();
+            List<Fornecedor> lista = new List<Fornecedor>();
             try
             {
                 SqlConnection cn = bd.abrirConexao();
@@ -97,17 +98,26 @@ namespace MiniERP
                 sqlCommand.Connection = cn;
                 sqlCommand.CommandType = System.Data.CommandType.Text;
                 sqlCommand.CommandText = "select nome from fornecedor";
-
                 sqlCommand.ExecuteNonQuery();
 
-                cb.Items.Add(sqlCommand.ExecuteNonQuery());
+                SqlDataAdapter baseDados = new SqlDataAdapter(sqlCommand);
+                comboBox.Items.Clear();
+                DataTable dtResultado = new DataTable();
+                baseDados.Fill(dtResultado);
+                comboBox.DisplayMember = "Nome";
+                comboBox.DataSource = dtResultado;
+                comboBox.Refresh();
+                
 
-                return cb;
+                //lista.Add();
+
+                //return lista;
 
             }
             catch (Exception ex)
             {
-                return null;
+                //return null;
+                MessageBox.Show("Erro: "+ex);
             }
             finally
             {

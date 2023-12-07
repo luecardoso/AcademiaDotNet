@@ -33,15 +33,13 @@ namespace MiniERP
             Produto produto = new Produto();
 
             produto.Nome = textBox_Nome.Text;
-            produto.Quantidade = (int)numericUpDown_Quantidade.Value;
+            produto.Quantidade = int.Parse(textBox_Quantidade.Text) ;
             produto.Descricao = textBox_Descricao.Text;
             produto.Preco = float.Parse(textBox_Preco.Text);
-            produto.IdFornecedor = comboBox_Fornecedor.SelectedIndex;
+            produto.IdFornecedor = int.Parse(textBox_Fornecedor.Text);
 
-
-
-            
-
+            MessageBox.Show("combobox  " + comboBox_Fornecedor.SelectedIndex);
+            MessageBox.Show("Fornecedor "+produto.IdFornecedor);
             if (produto.gravar())
             {
                 MessageBox.Show("Cadastrado Com Sucesso!");

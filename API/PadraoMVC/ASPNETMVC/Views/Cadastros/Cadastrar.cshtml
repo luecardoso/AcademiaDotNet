@@ -1,0 +1,15 @@
+﻿@* Falar qual a model que está usando para obter os dados *@
+@using ASPNETMVC.Models
+@model ASPNETMVC.Models.Pessoa
+@{
+}
+
+@using (Html.BeginForm("Cadastrar", "Cadastros", FormMethod.Post))
+{
+    <div>
+        @Html.DisplayNameFor(p => p.Nome) <br />
+        @Html.TextBoxFor(p => p.Nome)  <br />
+    </div>
+
+    <input type="submit" value="Cadastrar"/>
+}

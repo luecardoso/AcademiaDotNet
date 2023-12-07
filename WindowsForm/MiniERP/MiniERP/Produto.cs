@@ -38,13 +38,13 @@ namespace MiniERP
             command.Transaction = tran;
             command.CommandType = System.Data.CommandType.Text;
             command.CommandText = "insert into produto values" +
-                "(@nome, @quantidade, @preco,  @idFornecedor);";//@idCategoria,
+                "(@nome, @quantidade, @preco, @fk_fornecedor);";//@idCategoria,
 
             command.Parameters.Add("@nome", System.Data.SqlDbType.VarChar);
             command.Parameters.Add("@quantidade", System.Data.SqlDbType.Int);
             command.Parameters.Add("@preco", System.Data.SqlDbType.Float);
             //command.Parameters.Add("@idCategoria", System.Data.SqlDbType.Int);
-            command.Parameters.Add("@idFornecedor", System.Data.SqlDbType.Int);
+            command.Parameters.Add("@fk_fornecedor", System.Data.SqlDbType.Int);
             command.Parameters[0].Value = Nome;
             command.Parameters[1].Value = Quantidade;
             command.Parameters[2].Value = Preco;
@@ -59,6 +59,7 @@ namespace MiniERP
             }
             catch (Exception ex)
             {
+                MessageBox.Show("Erro = "+ex);
                 tran.Rollback();
                 return false;
             }

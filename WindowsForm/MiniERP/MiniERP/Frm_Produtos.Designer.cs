@@ -31,7 +31,6 @@
             label1 = new Label();
             textBox_Nome = new TextBox();
             label2 = new Label();
-            numericUpDown_Quantidade = new NumericUpDown();
             textBox_Descricao = new TextBox();
             label3 = new Label();
             label4 = new Label();
@@ -42,7 +41,8 @@
             button_Salvar = new Button();
             textBox_Buscar = new TextBox();
             button_Buscar = new Button();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown_Quantidade).BeginInit();
+            textBox_Quantidade = new TextBox();
+            textBox_Fornecedor = new TextBox();
             ((System.ComponentModel.ISupportInitialize)dataGridView_Produtos).BeginInit();
             SuspendLayout();
             // 
@@ -71,14 +71,6 @@
             label2.Size = new Size(69, 15);
             label2.TabIndex = 2;
             label2.Text = "Quantidade";
-            // 
-            // numericUpDown_Quantidade
-            // 
-            numericUpDown_Quantidade.Location = new Point(133, 96);
-            numericUpDown_Quantidade.Name = "numericUpDown_Quantidade";
-            numericUpDown_Quantidade.Size = new Size(120, 23);
-            numericUpDown_Quantidade.TabIndex = 4;
-            numericUpDown_Quantidade.ValueChanged += numericUpDown1_ValueChanged;
             // 
             // textBox_Descricao
             // 
@@ -117,7 +109,7 @@
             // comboBox_Fornecedor
             // 
             comboBox_Fornecedor.FormattingEnabled = true;
-            comboBox_Fornecedor.Location = new Point(575, 99);
+            comboBox_Fornecedor.Location = new Point(575, 53);
             comboBox_Fornecedor.Name = "comboBox_Fornecedor";
             comboBox_Fornecedor.Size = new Size(198, 23);
             comboBox_Fornecedor.TabIndex = 9;
@@ -166,11 +158,27 @@
             button_Buscar.Text = "Buscar";
             button_Buscar.UseVisualStyleBackColor = true;
             // 
+            // textBox_Quantidade
+            // 
+            textBox_Quantidade.Location = new Point(133, 93);
+            textBox_Quantidade.Name = "textBox_Quantidade";
+            textBox_Quantidade.Size = new Size(100, 23);
+            textBox_Quantidade.TabIndex = 15;
+            // 
+            // textBox_Fornecedor
+            // 
+            textBox_Fornecedor.Location = new Point(575, 99);
+            textBox_Fornecedor.Name = "textBox_Fornecedor";
+            textBox_Fornecedor.Size = new Size(100, 23);
+            textBox_Fornecedor.TabIndex = 16;
+            // 
             // Frm_Produtos
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 665);
+            Controls.Add(textBox_Fornecedor);
+            Controls.Add(textBox_Quantidade);
             Controls.Add(button_Buscar);
             Controls.Add(textBox_Buscar);
             Controls.Add(button_Salvar);
@@ -181,13 +189,11 @@
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(textBox_Descricao);
-            Controls.Add(numericUpDown_Quantidade);
             Controls.Add(label2);
             Controls.Add(textBox_Nome);
             Controls.Add(label1);
             Name = "Frm_Produtos";
             Text = "Produtos";
-            ((System.ComponentModel.ISupportInitialize)numericUpDown_Quantidade).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView_Produtos).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -198,7 +204,6 @@
         private Label label1;
         private TextBox textBox_Nome;
         private Label label2;
-        private NumericUpDown numericUpDown_Quantidade;
         private TextBox textBox_Descricao;
         private Label label3;
         private Label label4;
@@ -209,5 +214,7 @@
         private Button button_Salvar;
         private TextBox textBox_Buscar;
         private Button button_Buscar;
+        private TextBox textBox_Quantidade;
+        private TextBox textBox_Fornecedor;
     }
 }
