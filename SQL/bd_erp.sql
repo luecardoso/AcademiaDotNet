@@ -11,7 +11,7 @@ create table categoria
 create table fornecedor
 (
 	id integer primary key identity,
-	nome varchar(50) not null
+	nome varchar(50) not null unique
 );
 
 create table produto
@@ -20,7 +20,7 @@ create table produto
 	nome varchar(60) not null,
 	quantidade int not null,
 	descricao varchar(200),
-	preco float not null,
+	preco decimal(6,2) not null,
 	--fk_categoria integer not null,
 	--foreign key(fk_categoria) references categoria(id),
 	fk_fornecedor integer not null,
@@ -40,7 +40,8 @@ create table cliente
 create table pedido
 (
 	id integer primary key identity,
-	total float,
+	total decimal(6,2),
+	dataCompra datetime,
 	fk_cliente integer not null,
 	foreign key(fk_cliente) references cliente(id),
 );
@@ -48,10 +49,9 @@ create table pedido
 create table itempedido
 (
 	id integer primary key identity,
-	valorProduto float,
-	dataCompra datetime,
-	valorTotal float,
 	quantidadeComprada int,
+	valorUnitario decimal(6,2),
+	valorTotal decimal(6,2),
 	fk_produto integer not null,
 	foreign key(fk_produto) references produto(id),
 	fk_pedido integer not null,
@@ -129,10 +129,25 @@ values('Beatriz'),
 
 select * from cliente;
 
-select * from compra;
-select * from notafiscal;
+select * from pedido;
+select * from itempedido;
 
 insert into produto(nome, quantidade,preco,fk_fornecedor)
 values ('teste 01',5,59,5);
 
 select * from produto;
+
+insert into pedido(total,fk_cliente)
+values(420,1);
+
+insert into itempedido(valorUnitario,quantidadeComprada,valorTotal,fk_produto,fk_pedido)
+values (34.90,4,(34.90*45),3,1),
+(54.90,2,(54.90*2),7,1),
+(14.90,5,(14.90*5),2,1),
+(20.90,3,(20.90*3),5,1);
+
+select * from itempedido 
+where fk_pedido = 1;
+
+select * from fornecedor;
+delete from fornecedor where fornecedor.id = 14;
