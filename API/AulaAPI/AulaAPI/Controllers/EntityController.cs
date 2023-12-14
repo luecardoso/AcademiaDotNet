@@ -1,13 +1,16 @@
 ﻿using AulaAPI.DataModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace AulaAPI.Controllers
 {
+    [Authorize]
     [Route("api/entity")]
     [ApiController]
     public class EntityController : Controller
     {
+        [AllowAnonymous]
         [HttpGet]
         [Route("pessoas")]
         public async Task<IActionResult> getPessoas(
